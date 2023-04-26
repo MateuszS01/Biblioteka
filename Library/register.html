@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Rejestracja</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+
+
+<body id="body1">
+<div class = "log">
+
+<form name="f2" action = "register/registration.php" onsubmit = "return validationReg()" method = "POST">
+<p>
+<h1>Zarejestruj się:</h1>
+<label> Login: </label><input type = "text" id ="user" name  = "user" />
+</p>
+<p><label> Hasło: </label><input type = "password" id ="pass" name  = "pass" /></p>
+<p><label> E-Mail: </label><input type = "text" id ="mail" name  = "mail" /></p>
+<p>
+<input type =  "submit" id = "btn2" value = "Utwórz konto" />
+</p>
+</form>
+</div>
+<script>
+function validationReg(){var id=document.f2.user.value;
+var ps=document.f2.pass.value;
+var ml=document.f2.mail.value;
+if(id.length=="" && ps.length=="") {
+alert("Pola loginu, hasła i e-maila są puste.");
+return false;
+}
+else
+{if(id.length=="") {
+alert("Pole loginu jest puste.");
+return false;
+}else if (ps.length=="") {
+alert("Pole hasła jest puste.");
+return false;
+}else if (ml.length=="") {
+alert('Pole e-maila jest puste.');
+return false;
+}
+}
+}</script></body></html>

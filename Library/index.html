@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logowanie</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- <a href=admin.php id="">Admin Panel (TO ADD)</a> -->
+</head>
+
+
+<body id="body1">
+
+<header>
+				<p><div class="log">
+ <form action = "books.php" method = "POST">
+  <label for="search">Wyszukaj:</label><br>
+  <input type="text" id="search" name="search"><br>
+  <button type="submit" name="submit" id="send" onclick="document.location='books.php'">Szukaj &raquo;</button>
+</form> 
+</div></p>
+</header>
+
+<script src="skrypt.js"></script>
+
+<div class="log">
+ <form name="f1" action = "login/authentication.php" onsubmit = "return validation()" method = "POST">
+  <label for="login">Login:</label>
+  <br>
+  <input type="text" id="user" name="user">
+  <br>
+  <label for="haslo">Hasło:</label>
+  <br>
+  <input type="password" id="pass" name="pass">
+  <br>
+  <input type = "submit" id = "send" value = "Zaloguj się" />
+  <br><br><br>
+  <label for="register">Nie masz konta?:</label>
+  <br>
+  <a href=register.html id="send">Zarejestruj się</a>
+</form>
+</div>
+
+</body>
+
+<script>
+function validation(){var id=document.f1.user.value;
+var ps=document.f1.pass.value;
+if(id.length=="" && ps.length=="") {
+alert("Pola loginu i hasła są puste.");
+return false;
+}
+else
+{if(id.length=="") {
+alert("Pole loginu jest puste.");
+return false;
+}if (ps.length=="") {
+alert("Pole hasła jest puste.");
+return false;
+}
+}
+}</script>
+
+</body></html>
