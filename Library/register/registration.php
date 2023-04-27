@@ -14,7 +14,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM login WHERE username = ?')) 
 	$stmt->store_result();
 
 	if ($stmt->num_rows > 0) {
-		echo 'Nazw użytkownika jest zajęta, prosze, wybierz inną!';
+		echo 'Nazwa użytkownika jest zajęta, prosze, wybierz inną!';
 	} else {
 if ($stmt = $con->prepare('INSERT INTO login (username, password, email) VALUES (?, ?, ?)')) {
 	$password = $_POST['pass'];
