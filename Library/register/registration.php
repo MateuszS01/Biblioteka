@@ -20,7 +20,7 @@ if ($stmt = $con->prepare('INSERT INTO login (username, password, email) VALUES 
 	$password = $_POST['pass'];
 	$stmt->bind_param('sss', $_POST['user'], $password, $_POST['mail']);
 	$stmt->execute();
-	echo  "<script>window.location.assign('../userpage.php');
+	echo  "<script>window.location.assign('../index.html');
 	</script>";
 
 }
